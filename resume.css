@@ -7,12 +7,17 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg,
-            #4A148C,
-            #7B1FA2,
-            #F57C00,
-            #FFD54F);
-    color: white;
+    background: linear-gradient(
+        180deg,
+        #ff7b5a 0%,
+        #ff5c4d 12%,
+        #c13f86 35%,
+        #7a28a3 58%,
+        #3a1b87 80%,
+        #140b67 92%,
+        #04073d 100%
+    );
+    color: #fff;
 }
 
 .container {
@@ -40,6 +45,13 @@ body {
     align-items: center;
     font-size: 60px;
     font-weight: bold;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .info h1 {
@@ -98,62 +110,11 @@ section h2 {
 .skill:hover {
     background: #ffe5b4;
 }
-
-.profile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* ป้องกันไม่ให้รูปเบี้ยวหรือผิดสัดส่วน */
-    border-radius: 50%;
-    /* ตัดรูปให้เป็นวงกลมเท่ากับกรอบ */
+.card{
+    transition:.3s ease;
 }
 
-#themeBtn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    background: #ffffff;
-    color: #4A148C;
-    font-size: 22px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
-    transition: .3s;
-}
-
-#themeBtn:hover {
-    transform: scale(1.08);
-}
-body.light{
-    background: linear-gradient(135deg, #89CFF0, #B8E7FA);
-    color: #1f2937;
-}
-
-body.light .card{
-    background: rgba(255,255,255,.75);
-    color: #1f2937;
-    border: 1px solid rgba(255,255,255,.6);
-    backdrop-filter: blur(8px);
-}
-
-body.light .info h1,
-body.light .info h3,
-body.light .info p,
-body.light h2,
-body.light h3,
-body.light p,
-body.light b{
-    color: #1f2937;
-}
-
-body.light .skill{
-    background: #2563eb;
-    color: white;
-}
-
-body.light .skill:hover{
-    background: #1d4ed8;
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
 }

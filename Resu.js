@@ -1,6 +1,11 @@
-const btn = document.getElementById("themeBtn");
+const cards = document.querySelectorAll(".card");
 
-btn.onclick = () => {
-    document.body.classList.toggle("light");
-    btn.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
-};
+cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        card.style.color = "#FFD54F";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.color = "#fff";
+    });
+});
