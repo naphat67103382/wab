@@ -6,9 +6,13 @@
 }
 
 body{
-    min-height:100vh;
-    background:linear-gradient(135deg,#c1121f,#e85d04,#ff9e00);
-    color:#fff;
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+        #4A148C,
+        #7B1FA2,
+        #F57C00,
+        #FFD54F);
+    color: white;
 }
 
 .container{
