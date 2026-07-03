@@ -1,106 +1,159 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
     background: linear-gradient(135deg,
-        #4A148C,
-        #7B1FA2,
-        #F57C00,
-        #FFD54F);
+            #4A148C,
+            #7B1FA2,
+            #F57C00,
+            #FFD54F);
     color: white;
 }
 
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:40px;
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
 }
 
-.header{
-    display:flex;
-    align-items:center;
-    gap:30px;
-    margin-bottom:40px;
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
-.profile{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    background:#ffffff;
-    color:#c1121f;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:60px;
-    font-weight:bold;
+.profile {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #c1121f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
 }
 
-.info h1{
-    font-size:45px;
+.info h1 {
+    font-size: 45px;
 }
 
-.info h3{
-    color:#ffe5b4;
-    margin-top:10px;
+.info h3 {
+    color: #ffe5b4;
+    margin-top: 10px;
 }
 
-.info p{
-    margin-top:15px;
-    line-height:28px;
+.info p {
+    margin-top: 15px;
+    line-height: 28px;
 }
 
-section{
-    margin-top:35px;
+section {
+    margin-top: 35px;
 }
 
-section h2{
-    margin-bottom:15px;
-    border-left:5px solid #fff;
-    padding-left:12px;
+section h2 {
+    margin-bottom: 15px;
+    border-left: 5px solid #fff;
+    padding-left: 12px;
 }
 
-.card{
-    background:rgba(255,255,255,0.15);
-    padding:20px;
-    border-radius:12px;
-    margin-bottom:20px;
-    border:1px solid rgba(255,255,255,0.2);
-    transition:0.2s;
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.2s;
 }
 
-.card:hover{
-    background:rgba(255,255,255,0.22);
+.card:hover {
+    background: rgba(255, 255, 255, 0.22);
 }
 
-.skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:15px;
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
 }
 
-.skill{
-    background:#ffffff;
-    color:#c1121f;
-    padding:12px;
-    border-radius:8px;
-    text-align:center;
-    font-weight:600;
-    transition:0.2s;
+.skill {
+    background: #ffffff;
+    color: #c1121f;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.2s;
 }
 
-.skill:hover{
-    background:#ffe5b4;
+.skill:hover {
+    background: #ffe5b4;
 }
+
 .profile img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* ป้องกันไม่ให้รูปเบี้ยวหรือผิดสัดส่วน */
-    border-radius: 50%; /* ตัดรูปให้เป็นวงกลมเท่ากับกรอบ */
+    object-fit: cover;
+    /* ป้องกันไม่ให้รูปเบี้ยวหรือผิดสัดส่วน */
+    border-radius: 50%;
+    /* ตัดรูปให้เป็นวงกลมเท่ากับกรอบ */
+}
+
+#themeBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #4A148C;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+    transition: .3s;
+}
+
+#themeBtn:hover {
+    transform: scale(1.08);
+}
+body.light{
+    background: linear-gradient(135deg, #89CFF0, #B8E7FA);
+    color: #1f2937;
+}
+
+body.light .card{
+    background: rgba(255,255,255,.75);
+    color: #1f2937;
+    border: 1px solid rgba(255,255,255,.6);
+    backdrop-filter: blur(8px);
+}
+
+body.light .info h1,
+body.light .info h3,
+body.light .info p,
+body.light h2,
+body.light h3,
+body.light p,
+body.light b{
+    color: #1f2937;
+}
+
+body.light .skill{
+    background: #2563eb;
+    color: white;
+}
+
+body.light .skill:hover{
+    background: #1d4ed8;
 }
